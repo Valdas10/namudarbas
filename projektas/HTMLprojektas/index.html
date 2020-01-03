@@ -32,6 +32,13 @@
         .col-10 {width: 83.33%;}
         .col-11 {width: 91.66%;}
         .col-12 {width: 100%;}
+        @media screen and (max-width: 600px) {
+            [class*="col-"] {
+                width: 100%;
+                text-align: center;
+                flex-direction: column;
+            }
+        }
 
         html {
             font-family: "Lucida Sans", sans-serif;
@@ -55,10 +62,11 @@
         .topnav {
             overflow: hidden;
             background-color: darkgreen;
+
         }
 
         .topnav a {
-            float: left;
+            float: none;
             color: white;
             text-align: center;
             padding: 14px 20px;
@@ -78,6 +86,20 @@
         #pavadinimas {
             padding: 70px 0;
         }
+
+        #centravimas {
+            text-align: center;
+        }
+
+        .footer {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -88,17 +110,17 @@
     <div class="col-2 nuorodos"></div>
 </div>
 
-<div class="col-12 topnav">
-    <a href="#apiemus">APIE MUS</a>
-    <a href="#paslaugos">PASLAUGOS</a>
-    <a href="#pramogos">PRAMOGOS</a>
-    <a href="#kainos">KAINOS</a>
-    <a href="#kontaktai">KONTAKTAI</a>
+<div id="centravimas" class="col-12 topnav">
+    <a href="apiemus.html">APIE MUS</a>
+    <a href="paslaugos.html">PASLAUGOS</a>
+    <a href="pramogos.html">PRAMOGOS</a>
+    <a href="kainos.html">KAINOS</a>
+    <a href="kontaktai.html">KONTAKTAI</a>
 </div>
 
 <div class="row" id="zinute">
     <div class="col-3 menu">
-      <form action="/action_page.php">
+      <form id="fileUploadForm">
           <br>
           SUSISIEKIME:<br><br>
           Jūsų vardas<br>
@@ -112,12 +134,15 @@
           <br><br>
           <input type="submit" value="Siųsti">
       </form>
+        <div id="result"></div>
     </div>
 
     <div class="col-9">
         <img src="namas.jpg" height="600" width="900"/>
     </div>
 </div>
+
+<div class="col-12 footer">KONTAKTAI: GIRĖNŲ K., MOLĖTŲ R., LT 33020 TEL.: +37068200500 sodybapamiskes@gmail.com</div>
 
 </body>
 </html>
