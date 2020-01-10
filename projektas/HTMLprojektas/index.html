@@ -4,145 +4,51 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projektas</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        [class*="col-"] {
-            float: left;
-            padding: 15px;
-        }
-
-        .col-1 {width: 8.33%;}
-        .col-2 {width: 16.66%;}
-        .col-3 {width: 25%;}
-        .col-4 {width: 33.33%;}
-        .col-5 {width: 41.66%;}
-        .col-6 {width: 50%;}
-        .col-7 {width: 58.33%;}
-        .col-8 {width: 66.66%;}
-        .col-9 {width: 75%;}
-        .col-10 {width: 83.33%;}
-        .col-11 {width: 91.66%;}
-        .col-12 {width: 100%;}
-        @media screen and (max-width: 600px) {
-            [class*="col-"] {
-                width: 100%;
-                text-align: center;
-                flex-direction: column;
-            }
-        }
-
-        html {
-            font-family: "Lucida Sans", sans-serif;
-        }
-
-        .header {
-            background-color: springgreen;
-            padding: 10px;
-            text-align: center;
-            font-size: 80px;
-            color: darkgreen;
-            display: flex;
-            height: 270px;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .topnav {
-            overflow: hidden;
-            background-color: darkgreen;
-
-        }
-
-        .topnav a {
-            float: none;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .topnav a:hover {
-            background-color: lightgrey;
-            color: black;
-        }
-
-        #zinute {
-            padding: 80px;
-        }
-
-        #pavadinimas {
-            padding: 70px 0;
-        }
-
-        #centravimas {
-            text-align: center;
-        }
-
-        .footer {
-            position: relative;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: darkgreen;
-            color: white;
-            text-align: center;
-        }
-    </style>
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 <div class="header">
-    <div class="col-2 logotipas"><img src="images1.png" height="224" width="225"/></div>
+    <div class="col-2 logotipas"><img src="images/logotipas.png" alt="Logotipas" height="224" width="225"/></div>
     <div id="pavadinimas" class="col-8 pavadinimas">PAMIŠKĖS SODYBA</div>
     <div class="col-2 nuorodos"></div>
 </div>
 
 <div id="centravimas" class="col-12 topnav">
-    <a href="apiemus.html">APIE MUS</a>
-    <a href="paslaugos.html">PASLAUGOS</a>
-    <a href="pramogos.html">PRAMOGOS</a>
-    <a href="kainos.html">KAINOS</a>
-    <a href="kontaktai.html">KONTAKTAI</a>
+    <a href="apiemus.html">Apie mus</a>
+    <a href="paslaugos.html">Paslaugos</a>
+    <a href="pramogos.html">Pramogos</a>
+    <a href="kainos.html">Kainos</a>
+    <a href="kontaktai.html">Kontaktai</a>
 </div>
 
 <div class="row" id="zinute">
-    <div class="col-3 menu">
+    <div class="col-3 forma">
       <form id="fileUploadForm">
           <br>
           SUSISIEKIME:<br><br>
           Jūsų vardas<br>
-          <input type="text" name="jusuvardas" size="32">
+          <input type="text" name="vardas" size="32">
           <br><br>
           el. pašto adresas<br>
-          <input type="text" name="elpastoadresas" size="32">
+          <input type="text" name="elpastas" size="32">
           <br><br>
           žinutė<br>
           <textarea name="zinute" cols="30" rows="10"></textarea>
           <br><br>
-          <input type="submit" value="Siųsti">
+          <input type="submit" value="Siųsti" id="btnSubmit">
       </form>
         <div id="result"></div>
     </div>
 
     <div class="col-9">
-        <img src="namas.jpg" height="600" width="900"/>
+        <img src="images/namas.jpg" alt="Namas" height="600" width="900"/>
     </div>
 </div>
 
-<div class="col-12 footer">KONTAKTAI: GIRĖNŲ K., MOLĖTŲ R., LT 33020 TEL.: +37068200500 sodybapamiskes@gmail.com</div>
+<div class="col-12 footer">KONTAKTAI: &nbsp;&nbsp;&nbsp;GIRĖNŲ K., MOLĖTŲ R., LT 33020 &nbsp;&nbsp;&nbsp;TEL.: +37068200500 &nbsp;&nbsp;&nbsp;sodybapamiskes@gmail.com</div>
 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="formossaugojimas.js"></script>
 </body>
 </html>
